@@ -1,0 +1,183 @@
+{
+  "protocol": "chronological 60/20/20; validation selection; refit first 80%; one-step test",
+  "window": 30,
+  "max_epochs": 150,
+  "patience": 20,
+  "seeds": [
+    42,
+    7,
+    123
+  ],
+  "drop_start_utc": "2025-04-03 00:00:00+00:00",
+  "data": {
+    "daily": {
+      "raw_rows": 257,
+      "missing_close_dates": [],
+      "rows": 257,
+      "first_utc": "2024-04-04 23:00:00+00:00",
+      "last_utc": "2025-04-07 23:00:00+00:00",
+      "fit_rows": 154,
+      "validation_rows": 51,
+      "test_rows": 52,
+      "test_start_utc": "2025-01-27 00:00:00+00:00",
+      "drop_test_rows": 3,
+      "sha256": "4af6dde92c61c9c6e4b214c70ef1d695826ed8fc7631caf81b2941950fbaafb1"
+    },
+    "4h": {
+      "raw_rows": 257,
+      "missing_close_dates": [
+        "2024-12-24 12:00:00+00:00",
+        "2024-12-31 12:00:00+00:00"
+      ],
+      "rows": 255,
+      "first_utc": "2024-12-04 08:00:00+00:00",
+      "last_utc": "2025-04-08 07:00:00+00:00",
+      "fit_rows": 153,
+      "validation_rows": 51,
+      "test_rows": 51,
+      "test_start_utc": "2025-03-14 12:00:00+00:00",
+      "drop_test_rows": 10,
+      "sha256": "0ea5967571b58bf3b1504f3a9a52e160d1b12f3516631cad96f29da73b49578c"
+    }
+  },
+  "settings": {
+    "daily": {
+      "AR": {
+        "lags": 5,
+        "validation_RMSE": {
+          "1": 49.80005653599334,
+          "5": 49.624320135101726,
+          "10": 50.727123653457596,
+          "30": 53.974679512638346
+        }
+      },
+      "AR_diff": {
+        "lags": 1,
+        "validation_RMSE": {
+          "1": 49.24996358805857,
+          "5": 49.794793896110626,
+          "10": 49.538899811800675,
+          "30": 53.52153987013311
+        }
+      },
+      "RNN": {
+        "42": {
+          "best_epoch": 150
+        },
+        "7": {
+          "best_epoch": 150
+        },
+        "123": {
+          "best_epoch": 148
+        }
+      },
+      "LSTM": {
+        "42": {
+          "best_epoch": 145
+        },
+        "7": {
+          "best_epoch": 146
+        },
+        "123": {
+          "best_epoch": 146
+        }
+      },
+      "RNN_diff": {
+        "42": {
+          "best_epoch": 6
+        },
+        "7": {
+          "best_epoch": 1
+        },
+        "123": {
+          "best_epoch": 8
+        }
+      },
+      "LSTM_diff": {
+        "42": {
+          "best_epoch": 1
+        },
+        "7": {
+          "best_epoch": 29
+        },
+        "123": {
+          "best_epoch": 2
+        }
+      }
+    },
+    "4h": {
+      "AR": {
+        "lags": 10,
+        "validation_RMSE": {
+          "1": 31.43884718403205,
+          "5": 31.250039360422956,
+          "10": 30.479619147090208,
+          "30": 32.56379004574403
+        }
+      },
+      "AR_diff": {
+        "lags": 10,
+        "validation_RMSE": {
+          "1": 31.41042125810627,
+          "5": 31.529614695615493,
+          "10": 31.144380557637046,
+          "30": 33.124089550508955
+        }
+      },
+      "RNN": {
+        "42": {
+          "best_epoch": 147
+        },
+        "7": {
+          "best_epoch": 146
+        },
+        "123": {
+          "best_epoch": 145
+        }
+      },
+      "LSTM": {
+        "42": {
+          "best_epoch": 147
+        },
+        "7": {
+          "best_epoch": 148
+        },
+        "123": {
+          "best_epoch": 148
+        }
+      },
+      "RNN_diff": {
+        "42": {
+          "best_epoch": 1
+        },
+        "7": {
+          "best_epoch": 17
+        },
+        "123": {
+          "best_epoch": 2
+        }
+      },
+      "LSTM_diff": {
+        "42": {
+          "best_epoch": 53
+        },
+        "7": {
+          "best_epoch": 1
+        },
+        "123": {
+          "best_epoch": 1
+        }
+      }
+    }
+  },
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "versions": {
+    "torch": "2.6.0+cpu",
+    "numpy": "2.2.4",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.1",
+    "scikit-learn": "1.6.1",
+    "statsmodels": "0.14.4"
+  }
+}
